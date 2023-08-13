@@ -50,42 +50,4 @@ M.general = {
   },
 }
 
-M.nvterm = {
-  plugin = true,
-
-  t = {
-    -- toggle in terminal mode
-    ["<C-\\>"] = {
-      function()
-        require("nvterm.terminal").toggle "float"
-      end,
-      "Toggle floating term",
-    },
-
-    ["<C-]>"] = {
-      function()
-        require("nvterm.terminal").toggle "horizontal"
-      end,
-      "Toggle horizontal term",
-    },
-  },
-
-  n = {
-    -- toggle in normal mode
-    ["<C-\\>"] = {
-      function()
-        require("nvterm.terminal").toggle "float"
-      end,
-      "Toggle floating term",
-    },
-
-    ["<C-]>"] = {
-      function()
-        require("nvterm.terminal").toggle "horizontal"
-      end,
-      "New horizontal term",
-    },
-  },
-}
-
 return M
