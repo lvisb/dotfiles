@@ -177,6 +177,22 @@ local plugins = {
   { "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
   },
+
+  {
+    "NvChad/nvterm",
+    opts = {
+      terminals = {
+        type_opts = {
+          float = {
+            row = 0.17,
+            col = 0.16,
+            width = 0.7,
+            height = 0.6,
+          }
+        }
+      }
+    }
+  },
 }
 
 return plugins
