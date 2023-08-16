@@ -5,7 +5,7 @@ local b = null_ls.builtins
 local sources = {
 
   -- webdev stuff
-  b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+  b.formatting.prettier.with {  }, 
   b.formatting.eslint_d.with { filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" } },
 
   -- Lua
