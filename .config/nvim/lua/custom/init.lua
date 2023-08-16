@@ -12,6 +12,8 @@ vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 
 vim.wo.foldenable = false
 
+vim.cmd("set cmdheight=0")
+
 vim.api.nvim_create_autocmd("BufWinLeave", {
   pattern = { "*.*" },
   command = "mkview",
