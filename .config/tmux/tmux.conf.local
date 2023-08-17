@@ -94,7 +94,7 @@ tmux_conf_theme_pane_active_border="$main_color"
 
 # pane indicator colours (when you hit <prefix> + q)
 tmux_conf_theme_pane_indicator="$main_color"
-tmux_conf_theme_pane_active_indicator="$main_color
+tmux_conf_theme_pane_active_indicator="$main_color"
 
 # status line style
 tmux_conf_theme_message_fg="$tmux_conf_theme_colour_1"
