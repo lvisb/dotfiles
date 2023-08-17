@@ -8,7 +8,7 @@ colors:
   # Normal colors
   normal:
     red: "#FF6188"
-    black: "#403E41"
+    black: "#000000"
     green: "#A9DC76"
     yellow: "#FFD866"
     blue: "#62adff"
@@ -52,7 +52,7 @@ font:
     y: 0
 
 window:
-  opacity: 0.8
+  opacity: 0.9
   padding:
     x: 2
     y: 2
