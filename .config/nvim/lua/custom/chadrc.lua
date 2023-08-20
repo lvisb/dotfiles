@@ -4,8 +4,8 @@ local M = {}
 -- Path to overriding theme and highlights files
 local custom_highlights = require "custom.highlights"
 
--- local highlights = vim.tbl_deep_extend("force", { Normal = { bg = 'none' } }, custom_highlights)
-local highlights = custom_highlights
+local highlights = vim.tbl_deep_extend("force", { Normal = { bg = 'none' } }, custom_highlights)
+-- local highlights = custom_highlights
 
 M.ui = {
   theme = "onedark",
