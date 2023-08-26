@@ -1,0 +1,22 @@
+@import 'widgets/battery/battery.scss';
+@import 'widgets/volume/volume.scss';
+@import 'widgets/time/time.scss';
+
+* {
+  all: unset; 
+}
+
+.bar-container {
+  border-bottom: dotted 1px rgba(255, 255, 255, 0.4);
+  padding: 10px 0;
+
+  // &__start {
+  // }
+
+  // &__center {
+  // }
+
+  // &__end {
+  // }
+}
+

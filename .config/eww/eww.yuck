@@ -1,0 +1,40 @@
+(include "./widgets/battery/battery.yuck")
+(include "./widgets/volume/volume.yuck")
+(include "./widgets/time/time.yuck")
+
+(defwindow bar
+  :monitor 1
+  :geometry (geometry :x "0"
+                      :y "0"
+                      :width "98.6%"
+                      :height "30px"
+                      :anchor "top center")
+  :stacking "overlay"
+  :exclusive true
+  (bar-container)
+)
+
+(defwidget bar-container []
+  (box :class "bar-container" 
+    (box  :class "bar-container__start" 
+          :hexpand true
+          :active true
+          :halign "start"
+      )
+
+    (box  :class "bar-container__center" 
+          :hexpand true
+          :active true
+          :halign "center")
+
+    (box  :class "bar-container__end" 
+          :hexpand true
+          :active true
+          :halign "end"
+          :valign "center"
+      (box (battery) (volume))
+      (time)
+    )
+  )
+)
+

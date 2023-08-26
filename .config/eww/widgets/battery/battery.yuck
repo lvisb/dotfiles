@@ -1,0 +1,7 @@
+(deflisten api `./widgets/battery/battery.sh`)
+
+(defwidget battery []
+  (box :class "battery" 
+    (label :class "battery-icon" :text {api.battery_icon})
+  )
+)

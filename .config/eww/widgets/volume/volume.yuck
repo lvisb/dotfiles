@@ -1,0 +1,8 @@
+(deflisten audio `./widgets/volume/volume.sh`)
+
+(defwidget volume []
+  (box :class "volume" 
+    (button :class "volume-button" :fill false {audio.volume_icon})
+  )
+)
+
