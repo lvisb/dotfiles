@@ -193,6 +193,11 @@ local plugins = {
       }
     }
   },
+
+  {
+    "elkowar/yuck.vim",
+    lazy = false,
+  },
 }
 
 return plugins
