@@ -1,44 +1,30 @@
-(include "./widgets/battery/battery.yuck")
-(include "./widgets/volume/volume.yuck")
-(include "./widgets/time/time.yuck")
-(include "./widgets/date/date.yuck")
+(include "./widgets/bar/bar.yuck")
 
-(defwindow bar
-  :monitor 1
-  :geometry (geometry :x "0"
-                      :y "0"
-                      :width "98.6%"
-                      :height "30px"
-                      :anchor "top center")
+(defwindow primary-monitor-bar
+  :monitor 0
+  :geometry (
+    geometry 
+      :x "0"
+      :y "0"
+      :width "98.6%"
+      :height "30px"
+      :anchor "top center")
   :stacking "overlay"
   :exclusive true
   (bar-container)
 )
 
-(defwidget bar-container []
-  (box :class "bar-container" 
-    (box  :class "bar-container__start" 
-          :hexpand true
-          :active true
-          :halign "start"
-      )
-
-    (box  :class "bar-container__center" 
-          :hexpand true
-          :active true
-          :halign "center")
-
-    (box  :class "bar-container__end" 
-          :hexpand true
-          :active true
-          :halign "end"
-          :orientation "h"
-          :space-evenly false
-      (battery) 
-      (volume)
-      (date)
-      (time)
-    )
-  )
+(defwindow secondary-monitor-bar
+  :monitor 1
+  :geometry (
+    geometry 
+      :x "0"
+      :y "0"
+      :width "98.6%"
+      :height "30px"
+      :anchor "top center")
+  :stacking "overlay"
+  :exclusive true
+  (bar-container)
 )
 
