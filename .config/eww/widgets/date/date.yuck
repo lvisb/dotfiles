@@ -1,0 +1,8 @@
+(defwidget date []
+  (box :class "date" 
+    (label  :class "date-label" 
+            :text {formattime(EWW_TIME, '%a %d.%m.%C')}
+    )
+  )
+)
+

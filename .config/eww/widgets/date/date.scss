@@ -1,0 +1,11 @@
+.date {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 10px;
+
+  &-label {
+    font-family: 'bios';
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 0 10px;
+  }
+}
