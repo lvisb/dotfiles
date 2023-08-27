@@ -1,11 +1,9 @@
 .time {
-  background: rgba(#FFF, 0.1);
+  background: rgba(#fff, 0.1);
   border-radius: 2px;
 
-  &-label {
-    font-family: 'bios';
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    padding: 0 10px;
-  }
+  font-family: "bios";
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 0 10px;
 }
