@@ -5,23 +5,29 @@ $color-blue: #62adff;
 @import 'widgets/volume/volume.scss';
 @import 'widgets/time/time.scss';
 @import 'widgets/date/date.scss';
+@import 'widgets/workspaces/workspaces.scss';
 
 * {
   all: unset; 
+  font-family: 'Hack Nerd Font';
 }
 
 .bar-container {
+  $margin: 6px 0;
+
   border-bottom: dotted 1px rgba(255, 255, 255, 0.4);
-  padding: 10px 0;
 
-  // &__start {
-  // }
+  &__start {
+    margin: $margin;
+  }
 
-  // &__center {
-  // }
+  &__center {
+    margin: $margin;
+  }
 
-  // &__end {
-  // }
+  &__end {
+    margin: $margin;
+  }
 }
 
 tooltip {
