@@ -31,73 +31,18 @@ battery_icon() {
   else
     is_charging=0
   fi
+  percent=0
 
-  if [ $percent -ge 99 ] || [ $state == "fully-charged" ] ; then
-    if [ $is_charging == 1 ]; then
-      echo "󰂅"
-    else
-      echo "󰁹"
-    fi
-  elif [ $percent -ge 90 ]; then
-    if [ $is_charging == 1 ]; then
-      echo "󰂋"
-    else
-      echo "󰂂"
-    fi
-  elif [ $percent -ge 80 ]; then
-    if [ $is_charging == 1 ]; then
-      echo "󰂊"
-    else
-      echo "󰂁"
-    fi
-  elif [ $percent -ge 70 ]; then
-    if [ $is_charging == 1 ]; then
-      echo "󰂉"
-    else
-      echo "󰂀"
-    fi
+  if [ $percent -ge 95 ] || [ $state == "fully-charged" ] ; then
+    echo ""
   elif [ $percent -ge 60 ]; then
-    if [ $is_charging == 1 ]; then
-      echo "󰂉"
-    else
-      echo "󰁿"
-    fi
-  elif [ $percent -ge 50 ]; then
-    if [ $is_charging == 1 ]; then
-      echo "󰢝"
-    else
-      echo "󰁾"
-    fi
+    echo ""
   elif [ $percent -ge 40 ]; then
-    if [ $is_charging == 1 ]; then
-      echo "󰂈"
-    else
-      echo "󰁽"
-    fi
-  elif [ $percent -ge 30 ]; then
-    if [ $is_charging == 1 ]; then
-      echo "󰂇"
-    else
-      echo "󰁼"
-    fi
-  elif [ $percent -ge 20 ]; then
-    if [ $is_charging == 1 ]; then
-      echo "󰂆"
-    else
-      echo "󰁻"
-    fi
+    echo ""
   elif [ $percent -ge 10 ]; then
-    if [ $is_charging == 1 ]; then
-      echo "󰢜"
-    else
-      echo "󰁺"
-    fi
+    echo ""
   else
-    if [ $is_charging == 1 ]; then
-      echo "󰢟"
-    else
-      echo "󰂎"
-    fi
+    echo ""
   fi
 }
 

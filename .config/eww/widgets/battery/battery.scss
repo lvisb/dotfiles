@@ -1,6 +1,6 @@
 .battery {
   transition: 0.3s color;
-  padding: 0 10px;
+  padding: 0 12px 0;
 
   &--low {
     color: #e63946;
@@ -11,10 +11,10 @@
   }
 
   &--full {
-    color: #a7c957;
+    color: #FFF;
   }
 
   &-icon {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
