@@ -20,3 +20,12 @@
   // }
 }
 
+tooltip {
+  font-family: 'bios';
+  padding: 0 10px;
+  font-size: 10px;
+  border: solid 1px gray;
+  background: #222;
+  opacity: 0.8;
+  transition: 0.3s all;
+}
