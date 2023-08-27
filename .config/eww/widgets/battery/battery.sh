@@ -31,7 +31,6 @@ battery_icon() {
   else
     is_charging=0
   fi
-  percent=0
 
   if [ $percent -ge 95 ] || [ $state == "fully-charged" ] ; then
     echo ""
