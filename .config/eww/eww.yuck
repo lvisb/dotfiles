@@ -1,6 +1,7 @@
 (include "./widgets/battery/battery.yuck")
 (include "./widgets/volume/volume.yuck")
 (include "./widgets/time/time.yuck")
+(include "./widgets/date/date.yuck")
 
 (defwindow bar
   :monitor 1
@@ -31,8 +32,11 @@
           :hexpand true
           :active true
           :halign "end"
-          :valign "center"
-      (box (battery) (volume))
+          :orientation "h"
+          :space-evenly false
+      (battery) 
+      (volume)
+      (date)
       (time)
     )
   )

@@ -1,5 +1,6 @@
 .battery {
   transition: 0.3s color;
+  padding: 0 10px;
 
   &--low {
     color: #e63946;

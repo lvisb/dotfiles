@@ -1,10 +1,8 @@
 .volume {
-  padding: 0 0.5rem;
-  margin-right: 0.8rem;
-
   &-button {
     font-size: 16px;
     transition: 0.3s all;
+    padding: 0 10px;
 
     &:hover {
       color: white;
