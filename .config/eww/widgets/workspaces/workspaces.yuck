@@ -1,0 +1,26 @@
+;; https://wiki.hyprland.org/Useful-Utilities/Status-Bars/#eww
+
+(deflisten get-workspaces :initial "[]" "./widgets/workspaces/api/get-workspaces.sh")
+(deflisten current-workspace :initial "1" "./widgets/workspaces/api/get-active-workspace.sh")
+
+(defwidget workspaces[]
+  (box  
+    :class "workspaces"
+    (eventbox 
+      :onscroll "./widgets/workspaces/api/change-active-workspace.sh {} ${current-workspace}" 
+      (box 
+        :orientation "h"
+        :hexpand true
+        :spacing 4 
+        (for workspace in get-workspaces
+          (button 
+            :class "workspaces-item ${workspace.id == current-workspace ? 'workspaces-item--active' : ''}"
+            :onclick "hyprctl dispatch workspace ${workspace.id}"
+            "${workspace.id == current-workspace ? '  ' : '  '}"
+          )
+        )
+      )
+    )
+  )
+)
+

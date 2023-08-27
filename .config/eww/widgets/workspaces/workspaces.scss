@@ -1,0 +1,12 @@
+.workspaces {
+
+  &-item {
+    transition: 0.3s color;
+    font-size: 12px;
+    color: rgba(#FFF, 0.3);
+
+    &--active {
+      color: rgba($color-pink, 0.8);
+    }
+  }
+}
