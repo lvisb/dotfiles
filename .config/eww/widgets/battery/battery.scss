@@ -1,4 +1,17 @@
 .battery {
+  transition: 0.3s color;
+
+  &--low {
+    color: #e63946;
+  }
+
+  &--moderate {
+    color: #e9c46a;
+  }
+
+  &--full {
+    color: #a7c957;
+  }
 
   &-icon {
     font-size: 1rem;
