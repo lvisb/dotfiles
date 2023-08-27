@@ -1,7 +1,7 @@
 (deflisten api `./widgets/battery/battery.sh`)
 
 (defwidget battery []
-  (box :class "battery ${api.battery_percent <= 20 ? "battery--low" : ""} ${api.battery_percent > 20 && api.battery_percent < 90 ? "battery--moderate" : ""} ${api.battery_percent >= 90 ? "battery--full" : ""}" 
+  (box :class "battery ${api.battery_percent <= 10 ? "battery--low" : ""} ${api.battery_percent > 20 && api.battery_percent < 90 ? "battery--moderate" : ""} ${api.battery_percent >= 90 ? "battery--full" : ""}" 
        :tooltip "${api.battery_percent}% - ${api.battery_cycles} cycles"
     (label :class "battery-icon" :text {api.battery_icon})
   )
