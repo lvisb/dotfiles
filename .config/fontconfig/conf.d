@@ -12,6 +12,13 @@
    </prefer>
   </alias>
 
+  <alias>
+   <family>Cantarell</family>
+   <prefer>
+    <family>SF Pro Display</family>
+   </prefer>
+  </alias>
+
   <match target="font">
     <edit name="antialias" mode="assign">
       <bool>true</bool>
@@ -20,7 +27,7 @@
 
   <match target="font">
     <edit name="hinting" mode="assign">
-      <bool>true</bool>
+      <bool>false</bool>
     </edit>
   </match>
 
