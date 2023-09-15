@@ -116,6 +116,7 @@ alias lazygit-df='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias tns="tmux new-session -t "
 alias tas="tmux attach-session -t "
 alias N='sudo -E nnn -dH'
+alias nsel="cat ${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.selection | tr '\0' '\n'"
 
 n ()
 {
