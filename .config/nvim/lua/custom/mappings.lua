@@ -25,28 +25,32 @@ M.general = {
     },
 
     ["<leader>F"] = {
-      "<Plug>CtrlSFPrompt"
+      "<Plug>CtrlSFPrompt",
     },
 
+    -- vim hop
     ["f"] = {
       function()
-        local hop = require('hop')
-        local directions = require('hop.hint').HintDirection
+        local hop = require "hop"
+        local directions = require("hop.hint").HintDirection
 
-        hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
+        hop.hint_char1 { direction = directions.AFTER_CURSOR, current_line_only = true }
       end,
     },
 
     ["F"] = {
       function()
-        local hop = require('hop')
-        local directions = require('hop.hint').HintDirection
+        local hop = require "hop"
+        local directions = require("hop.hint").HintDirection
 
-        hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true })
+        hop.hint_char1 { direction = directions.BEFORE_CURSOR, current_line_only = true }
       end,
     },
 
-    ["H"] = { "<cmd> HopWord <CR>"},
+    ["H"] = { "<cmd> HopWord <CR>" },
+  },
+}
+
 M.tabufline = {
   n = {
     -- cycle through buffers
