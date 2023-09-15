@@ -3,9 +3,9 @@
 loaded=false
 
 volume_icon() {
-  local mute_status=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')
+  local mute_status=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}')
 
-  if [ "$mute_status" = "yes" ]; then
+  if [ "$mute_status" = "[MUTED]" ]; then
     echo "󰝟"
   else
     echo "󰕾"
@@ -26,8 +26,8 @@ if [[ $loaded == false ]]; then
   echo "$(json)"
 fi
 
-pactl subscribe | while read -r event; do
-  if [[ $event == *"change"* ]]; then
+alsactl monitor | while read -r event; do
+  if [[ -n "$event" ]]; then
     echo "$(json)"
   fi
 done
