@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -65,8 +65,8 @@ local plugins = {
     "kdheepak/lazygit.nvim",
     lazy = false,
     dependencies = {
-      "nvim-lua/plenary.nvim"
-    }
+      "nvim-lua/plenary.nvim",
+    },
   },
 
   {
@@ -96,7 +96,7 @@ local plugins = {
   {
     "windwp/nvim-ts-autotag",
     config = function()
-      require('nvim-ts-autotag').setup()
+      require("nvim-ts-autotag").setup()
     end,
   },
 
@@ -105,12 +105,12 @@ local plugins = {
     event = "BufRead",
     config = function()
       -- you can configure Hop the way you like here; see :h hop-config
-      require('hop').setup ({ keys = 'etovxqpdygfblzhckisuran' })
-    end
+      require("hop").setup { keys = "etovxqpdygfblzhckisuran" }
+    end,
   },
 
   {
-    "editorconfig/editorconfig-vim"
+    "editorconfig/editorconfig-vim",
   },
 
   {
@@ -119,11 +119,13 @@ local plugins = {
   },
 
   {
-    "dyng/ctrlsf.vim", lazy = false
+    "dyng/ctrlsf.vim",
+    lazy = false,
   },
 
-    -- copilot
-  { "zbirenbaum/copilot.lua",
+  -- copilot
+  {
+    "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
     config = function()
       vim.defer_fn(function()
@@ -136,11 +138,11 @@ local plugins = {
               jump_next = "]]",
               accept = "<CR>",
               refresh = "gr",
-              open = "<M-CR>"
+              open = "<M-CR>",
             },
             layout = {
               position = "bottom", -- | top | left | right
-              ratio = 0.4
+              ratio = 0.4,
             },
           },
           suggestion = {
@@ -167,16 +169,14 @@ local plugins = {
             cvs = false,
             ["."] = false,
           },
-          copilot_node_command = 'node', -- Node.js version must be > 16.x
+          copilot_node_command = "node", -- Node.js version must be > 16.x
           server_opts_overrides = {},
         }
       end, 100)
     end,
   },
 
-  { "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua", "nvim-cmp" },
-  },
+  { "zbirenbaum/copilot-cmp", after = { "copilot.lua", "nvim-cmp" } },
 
   {
     "NvChad/nvterm",
@@ -188,14 +188,35 @@ local plugins = {
             col = 0.16,
             width = 0.7,
             height = 0.6,
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    },
   },
 
   {
     "elkowar/yuck.vim",
+    lazy = false,
+  },
+
+  {
+    "numToStr/Comment.nvim",
+    opts = {
+      -- add any options here
+    },
+    config = function()
+      require("Comment").setup {
+        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+      }
+    end,
+    lazy = false,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "JoosepAlviste/nvim-ts-context-commentstring",
+    },
     lazy = false,
   },
 }
