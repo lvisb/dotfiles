@@ -157,9 +157,9 @@ local plugins = {
             },
           },
           filetypes = {
-            yaml = false,
-            markdown = false,
-            help = false,
+            yaml = true,
+            markdown = true,
+            help = true,
             gitcommit = false,
             gitrebase = false,
             hgcommit = false,
