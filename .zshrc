@@ -90,6 +90,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export GTK_THEME=Adwaita:dark
 export EDITOR=nvim
 export VISUAL=nvim
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
