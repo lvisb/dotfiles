@@ -218,6 +218,15 @@ local plugins = {
     },
     lazy = false,
   },
+
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        file_ignore_patterns = { "node_modules", ".git", "build", "dist" },
+      },
+    },
+  },
 }
 
 return plugins
