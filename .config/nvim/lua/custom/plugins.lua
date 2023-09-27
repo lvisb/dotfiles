@@ -227,6 +227,11 @@ local plugins = {
       },
     },
   },
+
+  {
+    "alvan/vim-closetag",
+    lazy = false,
+  }
 }
 
 return plugins
