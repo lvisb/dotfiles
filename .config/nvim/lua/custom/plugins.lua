@@ -119,8 +119,7 @@ local plugins = {
   },
 
   {
-    "dyng/ctrlsf.vim",
-    lazy = false,
+    "nvim-pack/nvim-spectre"
   },
 
   -- copilot

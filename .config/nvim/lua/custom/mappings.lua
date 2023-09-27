@@ -48,6 +48,9 @@ M.general = {
     },
 
     ["H"] = { "<cmd> HopWord <CR>" },
+
+    -- nvim-spectre
+    ["<leader>S"] = { "<cmd> lua require('spectre').toggle() <CR>", "Toggle Spectre" },
   },
 }
 
