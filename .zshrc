@@ -116,6 +116,7 @@ alias git-df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lazygit-df='/usr/bin/lazygit --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias tns="tmux new-session -t "
 alias tas="tmux attach-session -t "
+alias tls="tmux list-sessions "
 alias N='sudo -E nnn -dH'
 
 n ()
