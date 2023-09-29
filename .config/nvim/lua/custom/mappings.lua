@@ -14,7 +14,7 @@ M.general = {
     ["<C-Right>"] = { "<cmd> vertical resize +3<CR>" },
 
     -- lazygit
-    ["<leader>lg"] = { "<cmd> LazyGit <CR>", "Open lazygit" },
+    ["<leader>lg"] = { "<cmd> LazyGitCurrentFile <CR>", "Open lazygit" },
 
     -- lsp formatting
     ["<leader>lf"] = {
