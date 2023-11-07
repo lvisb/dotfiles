@@ -15,8 +15,10 @@ local sources = {
   b.formatting.clang_format,
 
   -- go
-  b.formatting.goimports_reviser,
-  b.formatting.gofumpt,
+  b.formatting.goimports_reviser.with {
+    filetypes = { "go" },
+    args = { "-rm-unused", "-set-alias", "-format", "$FILENAME" },
+  },
   b.diagnostics.golangci_lint.with {
     filetypes = { "go" },
     args = {
