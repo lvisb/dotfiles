@@ -91,7 +91,7 @@ local plugins = {
     lazy = false,
   },
 
-  { "romgrk/nvim-treesitter-context", lazy = false },
+  -- { "romgrk/nvim-treesitter-context", lazy = false },
 
   {
     "windwp/nvim-ts-autotag",
