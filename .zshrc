@@ -96,6 +96,7 @@ export VISUAL=nvim
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export TERM="xterm-256color"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 export NNN_BMS="d:$HOME/developer;H:$HOME;D:$HOME/Downloads;W:/mnt/WEB;A:/mnt/APLICATIVOS"
 export NVM_DIR="$HOME/.nvm"
