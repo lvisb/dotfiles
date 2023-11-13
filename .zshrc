@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 export GTK_THEME=Adwaita:dark
 export EDITOR=nvim
 export VISUAL=nvim
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export SSH_AUTH_SOCK="$HOME/.ssh-agent.socket"
 export TERM="xterm-256color"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
