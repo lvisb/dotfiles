@@ -119,6 +119,7 @@ alias tns="tmux new-session -t "
 alias tas="tmux attach-session -t "
 alias tls="tmux list-sessions "
 alias N='sudo -E nnn -dH'
+alias cat='bat'
 
 n ()
 {
