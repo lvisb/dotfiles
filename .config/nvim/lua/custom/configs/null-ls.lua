@@ -14,6 +14,11 @@ local sources = {
   -- cpp
   b.formatting.clang_format,
 
+  -- prisma
+  b.formatting.prismaFmt.with {
+    args = { "format", "--schema", "$FILENAME" },
+  },
+
   -- go
   b.formatting.goimports_reviser.with {
     filetypes = { "go" },
