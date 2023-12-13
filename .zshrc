@@ -120,6 +120,8 @@ alias tas="tmux attach-session -t "
 alias tls="tmux list-sessions "
 alias N='sudo -E nnn -dH'
 alias cat='bat'
+alias cp='/usr/local/bin/cpg -g'
+alias mv='/usr/local/bin/mvg -g'
 
 n ()
 {
