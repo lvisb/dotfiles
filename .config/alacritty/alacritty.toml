@@ -1,0 +1,65 @@
+live_config_reload = true
+
+[colors.bright]
+black = "#727072"
+blue = "#62adff"
+cyan = "#78DCE8"
+green = "#A9DC76"
+magenta = "#AB9DF2"
+red = "#FF6188"
+white = "#FCFCFA"
+yellow = "#FFD866"
+
+[colors.normal]
+black = "#000000"
+blue = "#62adff"
+cyan = "#78DCE8"
+green = "#A9DC76"
+magenta = "#AB9DF2"
+red = "#FF6188"
+white = "#FCFCFA"
+yellow = "#FFD866"
+
+[colors.primary]
+background = "#222222"
+foreground = "#FCFCFA"
+
+[font]
+size = 10
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "Bold Italic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[scrolling]
+history = 10000
+multiplier = 10
+# save_to_clipboard = true
+# semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[window]
+opacity = 1
+
+[window.padding]
+x = 2
+y = 2
