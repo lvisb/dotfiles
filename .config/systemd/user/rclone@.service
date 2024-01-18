@@ -19,7 +19,7 @@ ExecStartPre=-/usr/bin/mkdir -p %h/%i
 ExecStart= \
   /usr/bin/rclone mount \
     --config=%h/.config/rclone/rclone.conf \
-    --vfs-cache-mode writes \
+    --vfs-cache-mode full \
     --vfs-cache-max-size 100M \
     --log-level INFO \
     --log-file /tmp/rclone-%i.log \
