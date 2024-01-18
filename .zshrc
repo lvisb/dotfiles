@@ -122,6 +122,7 @@ alias N='sudo -E nnn -dH'
 alias cat='bat'
 alias cp='/usr/local/bin/cpg -g'
 alias mv='/usr/local/bin/mvg -g'
+alias addons='cd $HOME/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/Interface/AddOns/'
 
 n ()
 {
