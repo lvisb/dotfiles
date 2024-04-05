@@ -174,24 +174,6 @@ return {
   { "zbirenbaum/copilot-cmp", after = { "copilot.lua", "nvim-cmp" } },
 
   {
-    "zbirenbaum/nvterm",
-    config = function()
-      require("nvterm").setup({
-        terminals = {
-          type_opts = {
-            float = {
-              row = 0.17,
-              col = 0.16,
-              width = 0.7,
-              height = 0.6,
-            },
-          },
-        },
-      })
-    end,
-  },
-
-  {
     "elkowar/yuck.vim",
     lazy = false,
   },
