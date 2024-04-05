@@ -1,28 +1,38 @@
-local overrides = require "custom.configs.overrides"
+local overrides = require "configs.overrides"
 
----@type NvPluginSpec[]
-local plugins = {
+return {
+  {
+    "stevearc/conform.nvim",
+    -- event = 'BufWritePre', -- uncomment for format on save
+    config = function()
+      require "configs.conform"
+    end,
+  },
 
-  -- Override plugin definition options
+  {
+    "mfussenegger/nvim-lint",
+    config = function()
+      local lint = require("lint")
+
+      lint.linters_by_ft = {
+        typescript = { "eslint_d" },
+        typescriptreact = { "eslint_d" },
+      }
+    end
+  },
+
+  {
+    "nvim-tree/nvim-web-devicons"
+  },
 
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      -- format & linting
-      {
-        "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require "custom.configs.null-ls"
-        end,
-      },
-    },
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
-    end, -- Override to setup mason-lspconfig
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lspconfig"
+    end,
   },
 
-  -- override plugin configs
   {
     "williamboman/mason.nvim",
     opts = overrides.mason,
@@ -47,20 +57,6 @@ local plugins = {
     end,
   },
 
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
-
-  -- All NvChad plugins are lazy-loaded by default
-  -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
-  -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
-  -- {
-  --   "mg979/vim-visual-multi",
-  --   lazy = false,
-  -- }
-  --
   {
     "kdheepak/lazygit.nvim",
     lazy = false,
@@ -178,19 +174,21 @@ local plugins = {
   { "zbirenbaum/copilot-cmp", after = { "copilot.lua", "nvim-cmp" } },
 
   {
-    "NvChad/nvterm",
-    opts = {
-      terminals = {
-        type_opts = {
-          float = {
-            row = 0.17,
-            col = 0.16,
-            width = 0.7,
-            height = 0.6,
+    "zbirenbaum/nvterm",
+    config = function()
+      require("nvterm").setup({
+        terminals = {
+          type_opts = {
+            float = {
+              row = 0.17,
+              col = 0.16,
+              width = 0.7,
+              height = 0.6,
+            },
           },
         },
-      },
-    },
+      })
+    end,
   },
 
   {
@@ -205,17 +203,9 @@ local plugins = {
     },
     config = function()
       require("Comment").setup {
-        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+        -- pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
       }
     end,
-    lazy = false,
-  },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "JoosepAlviste/nvim-ts-context-commentstring",
-    },
     lazy = false,
   },
 
@@ -231,7 +221,5 @@ local plugins = {
   {
     "alvan/vim-closetag",
     lazy = false,
-  }
+  },
 }
-
-return plugins
