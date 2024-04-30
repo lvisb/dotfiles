@@ -156,6 +156,24 @@ n ()
     }
 }
 
+nd () 
+{
+  nordvpn disconnect;
+  nordvpn rate $1;
+}
+
+nc () {
+  nordvpn connect United_States Chicago;
+}
+
+nb () {
+  nordvpn connect Brazil Sao_Paulo;
+}
+
+pw () {
+  ping 24.105.62.129
+}
+
 mount_nfs () {
   sudo mkdir -p /mnt/WEB /mnt/APLICATIVOS /mnt/Fonts
   sudo mount -t nfs 192.168.15.50:/volume1/WEB /mnt/WEB
