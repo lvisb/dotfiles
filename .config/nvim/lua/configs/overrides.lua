@@ -50,6 +50,9 @@ M.mason = {
     "docker-compose-language-service",
     "dockerfile-language-server",
     "yaml-language-server",
+
+    "gopls",
+    "goimports_reviser",
   },
 }
 
