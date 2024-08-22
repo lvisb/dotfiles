@@ -4,8 +4,8 @@ local options = {
     typescript = { "eslint_d", "prettierd" },
     typescriptreact = { "eslint_d", "prettierd" },
     go = { "goimports_reviser" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    css = { "prettierd" },
+    html = { "prettierd" },
   },
 
   formatters = {
