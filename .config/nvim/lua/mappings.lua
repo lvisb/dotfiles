@@ -21,7 +21,7 @@ map("n", "<leader>lg", "<cmd> LazyGitCurrentFile <CR>", { desc = "Open lazygit" 
 -- lsp formatting
 -- map("n", "<leader>lf", "<cmd> lua vim.lsp.buf.format { async = true }<CR>", { desc = "LSP formatting" })
 map("n", "<leader>lf", function()
-  require("conform").format { lsp_fallback = true }
+  require("conform").format { lsp_fallback = false }
   require('lint').try_lint()
 end, { desc = "LSP formatting" })
 
