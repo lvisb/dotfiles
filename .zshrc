@@ -70,9 +70,10 @@ ZSH_THEME="nanotech"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autocomplete zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/fzf/key-bindings.zsh
 
 # User configuration
 
@@ -90,6 +91,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export GTK_THEME=Adwaita:dark
 export EDITOR=nvim
 export VISUAL=nvim
@@ -98,6 +101,7 @@ export TERM="xterm-256color"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
 export NNN_BMS="d:$HOME/developer;H:$HOME;D:$HOME/Downloads;W:/mnt/WEB;A:/mnt/APLICATIVOS"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -180,4 +184,8 @@ mount_nfs () {
   sudo mount -t nfs 192.168.15.50:/volume1/WEB /mnt/WEB
   sudo mount -t nfs 192.168.15.50:/volume1/APLICATIVOS /mnt/APLICATIVOS
   sudo mount -t nfs 192.168.15.50:/volume1/Fonts /mnt/Fonts
+}
+
+umount_nfs () {
+  sudo umount /mnt/WEB /mnt/APLICATIVOS /mnt/Fonts
 }
