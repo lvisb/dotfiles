@@ -204,4 +204,9 @@ return {
     "alvan/vim-closetag",
     lazy = false,
   },
+
+  {
+    "sebdah/vim-delve",
+    ft = 'go'
+  }
 }
