@@ -104,6 +104,7 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$(go env GOPATH)/bin"
 export NNN_BMS="d:$HOME/developer;H:$HOME;D:$HOME/Downloads;W:/mnt/WEB;A:/mnt/APLICATIVOS"
 export NVM_DIR="$HOME/.nvm"
+export WOW_DIR="$HOME/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -126,7 +127,7 @@ alias N='sudo -E nnn -dH'
 alias cat='bat'
 alias cp='/usr/local/bin/cpg -g'
 alias mv='/usr/local/bin/mvg -g'
-alias addons='cd $HOME/Games/battlenet/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_/Interface/AddOns/'
+alias addons='cd "$WOW_DIR/Interface/AddOns"'
 alias air='$(go env GOPATH)/bin/air'
 
 n ()
@@ -189,3 +190,4 @@ mount_nfs () {
 umount_nfs () {
   sudo umount /mnt/WEB /mnt/APLICATIVOS /mnt/Fonts
 }
+
