@@ -15,5 +15,6 @@ nohup rclone copy "$HOME/.config/rclone" "$homeDestinationDir/.config/rclone" > 
 nohup rclone copy "$HOME/.config/datagrip" "$homeDestinationDir/.config/datagrip" > /tmp/rclone.log 2>&1 &
 nohup rclone copy "$HOME/.zsh_history" "$homeDestinationDir/.zsh_history" > /tmp/rclone.log 2>&1 &
 nohup rclone copy "$HOME/.local/share/fonts" "$homeDestinationDir/.local/share/fonts" > /tmp/rclone.log 2>&1 &
+nohup rclone copy "$HOME/.gitconfig" "$homeDestinationDir/" > /tmp/rclone.log 2>&1 &
 
 flatpak list --app --columns=application | awk '{print "flatpak install " $1}' > "$destinationDir/flatpak-apps.txt"
