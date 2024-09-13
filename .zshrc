@@ -96,6 +96,7 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export GTK_THEME=Adwaita:dark
 export EDITOR=nvim
 export VISUAL=nvim
+export GOPATH="$HOME/.local/share/go"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export TERM="xterm-256color"
 export PATH="$PATH:$HOME/.local/bin"
