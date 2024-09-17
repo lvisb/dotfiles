@@ -6,6 +6,7 @@ local options = {
     go = { "goimports_reviser" },
     css = { "prettierd" },
     html = { "prettierd" },
+    json = { "prettierd" },
   },
 
   formatters = {
