@@ -106,7 +106,7 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 export NNN_BMS="d:$HOME/developer;H:$HOME;D:$HOME/Downloads;W:/mnt/WEB;A:/mnt/APLICATIVOS"
 export NVM_DIR="$HOME/.nvm"
 export WOW_DIR="$HOME/Games/battlenet/drive_c/Program Files (x86)/World of Warcraft/_retail_"
-export HISTORY_FILTER_EXCLUDE=("ll" "tmux" "btop" "nvim" "vim" "cd" "mv" "lsblk" "notepad" "ls" "nc" "nd" "tas")
+export HISTORY_FILTER_EXCLUDE=("ll" "tmux" "btop" "nvim" "vim" "cd" "mv" "lsblk" "notepad" "ls" "nc" "nd" "tas" "pwd")
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
