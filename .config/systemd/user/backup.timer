@@ -3,7 +3,7 @@ Description=Timer para executar backup a cada 5 dias
 
 [Timer]
 OnBootSec=5min
-OnUnitActiveSec=5d
+OnUnitActiveSec=1d
 Persistent=true
 
 [Install]
