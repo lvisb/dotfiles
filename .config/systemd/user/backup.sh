@@ -20,4 +20,6 @@ nohup rclone copy "$HOME/developer/books" "$homeDestinationDir/developer/books" 
 
 flatpak list --app --columns=application | awk '{print "flatpak install " $1}' > "$destinationDir/flatpak-apps.txt"
 
+paru -Qe | awk '{print $1}' > "$destinationDir/aur-packages.txt"
+
 echo "$(date '+%Y-%m-%d %H:%M:%S')" >> "$destinationDir/backup-history.txt"
