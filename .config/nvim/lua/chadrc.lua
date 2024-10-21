@@ -1,5 +1,6 @@
--- This file  needs to have same structure as nvconfig.lua
--- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
+-- This file needs to have same structure as nvconfig.lua 
+-- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
+-- Please read that file to know all available options :( 
 
 local custom_highlights = require "configs.highlights"
 local highlights = vim.tbl_deep_extend("force", { Normal = { bg = "none" } }, custom_highlights)
@@ -7,7 +8,7 @@ local highlights = vim.tbl_deep_extend("force", { Normal = { bg = "none" } }, cu
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
+M.base46 = {
   theme = "onedark",
 
   hl_override = highlights,
