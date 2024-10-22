@@ -1,4 +1,5 @@
 local options = {
+  log_level = vim.log.levels.DEBUG,
   formatters_by_ft = {
     lua = { "stylua" },
     typescript = { "eslint_d", "prettierd" },
@@ -15,6 +16,14 @@ local options = {
       args = { "-rm-unused", "-set-alias", "-format", "$FILENAME" },
       stdin = false,
     },
+
+    eslint_d = {
+      command = "eslint_d",
+      args = { "--fix-to-stdout", "--stdin", "--stdin-filename", "$FILENAME" },
+      cwd = require("conform.util").root_file({
+        "package.json",
+      }),
+    }
   },
 
   -- format_on_save = {
