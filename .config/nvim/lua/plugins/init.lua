@@ -233,9 +233,6 @@ return {
             enabled = false,
           },
         },
-        notify = {
-          background_colour = "#000000",
-        },
         -- you can enable a preset for easier configuration
         presets = {
           bottom_search = true, -- use a classic bottom cmdline for search
@@ -244,10 +241,13 @@ return {
           inc_rename = false, -- enables an input dialog for inc-rename.nvim
           lsp_doc_border = false, -- add a border to hover docs and signature help
         },
+        routes = {
+          { filter = { event = "msg_show", kind = "", find = "written" }, opts = { skip = true } },
+        },
       }
 
       require("notify").setup {
-        background_colour = "#000000", -- Set background color to fix transparency issue
+        background_colour = "#CCCCCC", -- Set background color to fix transparency issue
       }
     end,
   },
